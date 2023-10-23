@@ -1,0 +1,25 @@
+<main class="catalog  mb ">
+
+    <div class="boxleft">
+
+        <div class="box_title">Quên mật khẩu</div>
+        <div class="box_content form_account">
+            <form action="index.php?act=quenmatkhau" method="post">
+            <div>
+                <p>Email</p>
+                <input type="email" name="email" placeholder="Email">
+            </div>
+
+            <input type="submit" value="Gửi" name="guiemail">
+            <input type="reset" value="Nhập lại"><br>
+            <?php if (isset($sendMailMess) && $sendMailMess != '') {
+                echo $sendMailMess;
+            } ?>
+            </form>
+        </div>
+
+    </div>
+    <?php include "view/boxright.php" ?>
+
+
+</main>
